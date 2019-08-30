@@ -169,23 +169,23 @@ export default {
         });
     },
     download() {
-      // this.$Spin.show({
-      //   render: h => {
-      //     return h("div", [
-      //       h("Icon", {
-      //         class: "demo-spin-icon-load",
-      //         props: {
-      //           type: "ios-loading",
-      //           size: 30
-      //         }
-      //       }),
-      //       h("div", "正在下载...")
-      //     ]);
-      //   }
-      // });
-      // setTimeout(() => {
-      //   this.$Spin.hide();
-      // }, 3000);
+      this.$Spin.show({
+        render: h => {
+          return h("div", [
+            h("Icon", {
+              class: "demo-spin-icon-load",
+              props: {
+                type: "ios-loading",
+                size: 30
+              }
+            }),
+            h("div", "正在下载...")
+          ]);
+        }
+      });
+      setTimeout(() => {
+        this.$Spin.hide();
+      }, 3000);
     },
     ok() {
       if (this.AABEFAAEBB === this.AABEFAAEBB1 && this.AABEFAAEBB !== "") {
